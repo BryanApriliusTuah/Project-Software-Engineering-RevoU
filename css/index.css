@@ -5,7 +5,7 @@ body {
 }
 
 .wallpaper-container {
-    background: green;
+    /* background: green; */
     position: absolute;
     z-index: -1;
     width: 100%;
