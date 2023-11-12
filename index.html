@@ -19,8 +19,8 @@
         </div>
         <div class="menu">
             <p>Home</p>
-            <p>Destinations</p>
-            <p>Tickets</p>
+            <p class="menu-destinations">Destinations</p>
+            <p class="menu-ticket">Tickets</p>
             <p>Contact Us</p>
         </div>
     </nav>
@@ -49,41 +49,52 @@
                 <img src="./images/travel7.jpg" alt="">
             </div>
         </div>
+        <div class="destination-1">
+            <div class="nama">Nusa Penida, Bali</div>
+            <div class="rating">⭐ 4.7</div>
+            <div class="icon">
+                <img src="./images/travel7.jpg" alt="">
+            </div>
+        </div>
     </div>
 
     <!-- Content Website Yang Berisikan Our Team -->
     <div class="our-team">
         <h1>Our Team</h1>
         <div class="icon-team">
-            <div class="gambar">
-                <img class="bia" src="./images/bryan.jpg" alt="">
-                <p>Bryan</p>
-                <p>Project Leader</p>
+            <div class="baris">
+                <div class="gambar">
+                    <img class="bia" src="./images/bryan.jpg" alt="">
+                    <p>Bryan</p>
+                    <p>Project Leader</p>
+                </div>
+                <div class="gambar">
+                    <img class="hanifa" src="./images/Hanifa.jpg" alt="">
+                    <p>Hanifa Abdiah Rahmawati</p>
+                    <p>Front End Engineer</p>
+                </div>
+                <div class="gambar">
+                    <img src="./images/khusna.jpg" alt="">
+                    <p>Khusna Wakhidakh</p>
+                    <p>Front End Engineer</p>
+                </div>
             </div>
-            <div class="gambar">
-                <img class="hanifa" src="./images/Hanifa.jpg" alt="">
-                <p>Hanifa Abdiah Rahmawati</p>
-                <p>Front End Engineer</p>
-            </div>
-            <div class="gambar">
-                <img src="./images/khusna.jpg" alt="">
-                <p>Khusna Wakhidakh</p>
-                <p>Front End Engineer</p>
-            </div>
-            <div class="gambar">
-                <img src="./images/dhea.jpg" alt="">
-                <p>Dhea Tirta Ananta</p>
-                <p>Back End Engineer</p>
-            </div>
-            <div class="gambar">
-                <img src="./images/nanda.jpg" alt="">
-                <p>Nanda Rahma Feryansyah</p>
-                <p>Back End Engineer</p>
-            </div>
-            <div class="gambar">
-                <img class="bia" src="./images/bia.jpg" alt="">
-                <p>Baiq Rabiatul adawiyah</p>
-                <p>Quality Assurance</p>
+            <div class="baris">
+                <div class="gambar">
+                    <img src="./images/dhea.jpg" alt="">
+                    <p>Dhea Tirta Ananta</p>
+                    <p>Back End Engineer</p>
+                </div>
+                <div class="gambar">
+                    <img src="./images/nanda.jpg" alt="">
+                    <p>Nanda Rahma Feryansyah</p>
+                    <p>Back End Engineer</p>
+                </div>
+                <div class="gambar">
+                    <img class="bia" src="./images/bia.jpg" alt="">
+                    <p>Baiq Rabiatul adawiyah</p>
+                    <p>Quality Assurance</p>
+                </div>
             </div>
         </div>
     </div>
@@ -105,7 +116,16 @@
     </div>
     </div>
 
-    
+    <script>
+        let a = document.querySelector(".menu-destinations");
+        a.addEventListener("click",function(){
+            window.location = "destinations.html"
+        })
+        let b = document.querySelector(".menu-ticket");
+        b.addEventListener("click",function(){
+            window.location = "ticket.html"
+        })
+    </script>
 
 </body>
 </html>

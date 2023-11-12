@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/destinations.css">
+    <link rel="stylesheet" href="css/destinationshotel.css">
     <title>Fast Travel</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
         </div>
         <div class="menu">
             <p class="menu-home">Home</p>
-            <p>Destinations</p>
+            <p class="menu-destinations">Destinations</p>
             <p class="menu-ticket">Tickets</p>
             <p>Contact Us</p>
         </div>
@@ -40,28 +40,28 @@
                 <div class="nama">Raja Ampat, Papua Barat</div>
                 <div class="rating">⭐ 4.5</div>
                 <div class="icon">
-                    <img src="./images/travel4.jpg" alt="">
+                    <img src="./images/eL Hotel.png" alt="">
                 </div>
             </div>
             <div class="destination-1">
                 <div class="nama">Nusa Penida, Bali</div>
                 <div class="rating">⭐ 4.8</div>
                 <div class="icon">
-                    <img src="./images/travel7.jpg" alt="">
+                    <img src="./images/Lumire Hotel.png" alt="">
                 </div>
             </div>
             <div class="destination-1">
                 <div class="nama">Bromo, Jawa Timur</div>
                 <div class="rating">⭐ 4.9</div>
                 <div class="icon">
-                    <img src="./images/travel8.jpg" alt="">
+                    <img src="./images/Hotel Aston Priority.png" alt="">
                 </div>
             </div>
             <div class="destination-1">
                 <div class="nama">Banda Neira, Maluku</div>
                 <div class="rating">⭐ 4.6</div>
                 <div class="icon">
-                    <img src="./images/travel9.jpg" alt="">
+                    <img src="./images/Hotel Rivoli Senen.png" alt="">
                 </div>
             </div>
             <div class="destination-1">
@@ -82,17 +82,21 @@
     </div>
     
     <script>
-        let a = document.querySelector(".menu-home");
+        let a = document.querySelector(".contents .menu-destination .liburan");
         a.addEventListener("click",function(){
-            window.location = "index.html"
+            window.location = "destinations.html"
         })
         let b = document.querySelector(".menu-ticket");
         b.addEventListener("click",function(){
             window.location = "ticket.html"
         })
-        let c = document.querySelector(".contents .menu-destination .hotel");
+        let c = document.querySelector(".menu-destinations");
         c.addEventListener("click",function(){
-            window.location = "destinationshotel.html"
+            window.location = "destinations.html"
+        })
+        let d = document.querySelector(".menu-home");
+        d.addEventListener("click",function(){
+            window.location = "index.html"
         })
     </script>
 

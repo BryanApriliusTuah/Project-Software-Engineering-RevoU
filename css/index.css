@@ -2,6 +2,7 @@ body {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
+    background-color: black;
 }
 
 .wallpaper-container {
@@ -88,11 +89,33 @@ nav {
     top: 25%;
     right: 3%;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: center; */
     align-items: center;
     color: white;
+    gap: 30px;
+    overflow-x: auto;
 }
 
+.destination-1:first-child{
+    margin-left: 20px;
+}
+
+.destination-1:last-child {
+    margin-right: 20px;
+}
+
+.destinations::-webkit-scrollbar {
+    width: 0;
+}
+
+.destination-1 {
+    /* margin-left: 15px; */
+    /* background: green; */
+    min-width: 40%;
+    height: 98%;
+    border-radius: 20px;
+    /* overflow: auto; */
+}
 .nama {
     /* background: wheat; */
     width: 100%;
@@ -104,7 +127,7 @@ nav {
 }
 
 .icon {
-    background: blue;
+    /* background: blue; */
     width: 100%;
     height: 85%;
     border-radius: 20px;
@@ -121,20 +144,14 @@ nav {
     object-position: 100%;
 }
 
-.destination-1 {
-    /* background: green; */
-    width: 40%;
-    height: 90%;
-    border-radius: 20px;
-}
 
 .maskapai {
     position: absolute;
-    top: 175%;
-    background: rgb(0, 0, 0);
+    top: 237%;
+    /* background: black; */
     /* opacity: 0.5; */
     width: 100%;
-    height: 250px;
+    height: fit-content;
     color: white;
     /* border-radius: 20px; */
     /* border-top: 1px dashed black; */
@@ -143,6 +160,7 @@ nav {
 
 .maskapai h1 {
     /* padding-top: 20px; */
+    /* background-color: white; */
     display: flex;
     justify-content: center;
     font-family: monospace;
@@ -169,8 +187,8 @@ nav {
 
 .our-team {
     position: absolute;
-    top: 100%;
-    background: black;
+    top: 130%;
+    /* background: black; */
     width: 100%;
     height: 500px;
     display: flex;
@@ -191,20 +209,33 @@ nav {
 .icon-team {
     /* background: blue; */
     width: 100%;
-    height: 80%;
+    height: fit-content;
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    /* gap: 10px; */
     
 
 }
+
+.icon-team .baris {
+    /* background-color: grey; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
 .icon-team .gambar {
-    /* background: grey; */
+    /* background: red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 20%;
-    height: 70%;
+    height: 100%;
     border-radius: 20px;
 }
 
