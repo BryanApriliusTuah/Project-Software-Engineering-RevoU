@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fast Travel</title>
+    <link rel="stylesheet" href="css/contactus.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="wallpaper-container">
+        <img src="./images/travel3.jpg" alt="">
+    </div>
+    <div class="filter-wallpaper"></div>
+
+    <!-- Menu Bar Paling Atas -->
+    <nav>
+        <div class="judul">
+            Fast Travel
+        </div>
+        <div class="menu">
+            <p class="menu-home">Home</p>
+            <p class="menu-destinations">Destinations</p>
+            <p class="menu-ticket">Tickets</p>
+            <p class="menu-contact">Contact Us</p>
+            <p class="menu-about-us">About Us</p>
+        </div>
+    </nav>
+
+    <section class="content">
+        <div class="contactus">
+            <div class="a contactus-text">
+                <h1>CONTACT US</h1>
+            </div>
+            <div class="a call-center">
+                <img src="images/Phone.png" alt="" width="40px" height="40px">
+                <div class="info">
+                    <p style="margin:0;">Call Center</p>
+                    <p style="margin : 0; padding-top:0;">+62 809 1500 888</p>
+                </div>
+            </div>
+            <div class="a email">
+                <img src="images/Phone.png" alt="" width="40px" height="40px">
+                <div class="info">
+                    <p style="margin:0;">E-mail</p>
+                    <p style="margin : 0; padding-top:0;">cs@fasttravel.com</p>
+                </div>
+            </div>
+            <div class="a location">
+                <img src="images/Phone.png" alt="" width="40px" height="40px">
+                <div class="info">
+                    <p style="margin:0;">Location</p>
+                    <p style="margin : 0; padding-top:0;">Jakarta Selatan,DKI Jakarta</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="all name">
+                <label for="">Name</label>
+                <input type="text" id="name">
+            </div>
+            <div class="all email">
+                <label for="">E-mail</label>
+                <input type="email" id="email">
+            </div>
+            <div class="all your-message">
+                <label for="">Your Message</label>
+                <textarea name="" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="button">
+                <button onclick="GetData()">SEND</button>
+            </div>
+        </div>
+    </section>
+    <script src="js/MovePage.js"></script>
+    <script src="js/RequestContactUs.js"></script>
+    <script src="js/API.js"></script>
+</body>
+</html>

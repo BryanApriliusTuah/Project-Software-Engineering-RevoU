@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="css/ticket.css">
 </head>
 <body>
+    
+    <!-- Background -->
     <div class="wallpaper-container">
         <img src="./images/travel3.jpg" alt="">
     </div>
@@ -18,11 +20,13 @@
         <div class="menu">
             <p class="menu-home">Home</p>
             <p class="menu-destinations">Destinations</p>
-            <p>Tickets</p>
-            <p>Contact Us</p>
+            <p class="menu-ticket">Tickets</p>
+            <p class="menu-contact">Contact Us</p>
+            <p class="menu-about-us">About Us</p>
         </div>
     </nav>
 
+    <!-- Content -->
     <section class="content">
         <div class="contents dari">
             <p>Dari</p>
@@ -47,12 +51,12 @@
             </select>
         </div> 
         <div class="contents tanggal-pergi">
-            <p>Tanggal Pergi</p>
-            <input type="date" id="tanggal-pergi">
+            <p>Jam Pergi</p>
+            <input type="time" id="tanggal-pergi">
         </div> 
         <div class="contents tanggal-pulang">
-            <p>Tanggal Pulang</p>
-            <input type="date" id="tanggal-pulang">
+            <p>Jam Pulang</p>
+            <input type="time" id="tanggal-pulang">
         </div> 
         <div class="contents kelas-penerbangan">
             <p>Kelas Penerbangan</p>
@@ -67,23 +71,8 @@
             <button onclick="submit()">Cari Ticket</button>
         </div>
     </section>
-
-    <script>
-        let a = document.querySelector(".menu-home");
-        a.addEventListener("click",function(){
-            window.location = "index.html"
-        })
-
-        let b = document.querySelector(".menu-destinations");
-        b.addEventListener("click",function(){
-            window.location = "destinations.html"
-        })
-
-        function submit(){
-            // let dari = document.getElementById("kelas-penerbangan").value
-            // alert(dari)
-        }
-    </script>
-
+    <script src="js/MovePage.js"></script>
+    <script src="js/API.js"></script>
+    <script src="js/SearchTicket.js"></script>
 </body>
 </html>

@@ -1,0 +1,141 @@
+body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    /* background-color: black; */
+}
+
+.wallpaper-container {
+    /* background: green; */
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.wallpaper-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.filter-wallpaper {
+    position: absolute;
+    background: #030834;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+nav {
+    /* background: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    color: white;
+}
+
+.judul {
+    padding-left: 50px;
+}
+.menu {
+    /* background: grey; */
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.menu p:hover {
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+.content {
+    /* background-color: grey; */
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.contactus {
+    background: rgba(255, 255, 255, 0.15);
+    width: 35%;
+    height: 85%;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contactus .a {
+    /* background: rgba(255, 255, 255, 0.3); */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    /* background: rgba(255, 255, 255, 0.3); */
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    /* background: rgba(255, 255, 255, 0.3); */
+    width: 35%;
+    height: 95%;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.form .all {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form .all input {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 100%;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.form .all textarea {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.form .button {
+    position: relative;
+    left: 89%;
+    width: fit-content;
+
+}
+
+.form .button button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}

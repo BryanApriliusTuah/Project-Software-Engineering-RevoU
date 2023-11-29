@@ -6,6 +6,10 @@
 </head>
 <body>
 
+    <div class="popUp">
+
+    </div>
+
     <!-- Background Wallpaper & Filter Wallpaper -->
     <div class="wallpaper-container">
         <img src="./images/travel3.jpg" alt="">
@@ -19,9 +23,10 @@
         </div>
         <div class="menu">
             <p class="menu-home">Home</p>
-            <p>Destinations</p>
+            <p class="menu-destinations">Destinations</p>
             <p class="menu-ticket">Tickets</p>
-            <p>Contact Us</p>
+            <p class="menu-contact">Contact Us</p>
+            <p class="menu-about-us">About Us</p>
         </div>
     </nav>
 
@@ -36,42 +41,43 @@
         </section>
     
         <section class="destination">
-            <div class="destination-1">
+            <!-- Needs Looping Javascript to generated data from database -->
+            <div class="destination-1" onclick="getData(this)">
                 <div class="nama">Raja Ampat, Papua Barat</div>
                 <div class="rating">⭐ 4.5</div>
                 <div class="icon">
                     <img src="./images/travel4.jpg" alt="">
                 </div>
             </div>
-            <div class="destination-1">
+            <div class="destination-1" onclick="getData(this)">
                 <div class="nama">Nusa Penida, Bali</div>
                 <div class="rating">⭐ 4.8</div>
                 <div class="icon">
                     <img src="./images/travel7.jpg" alt="">
                 </div>
             </div>
-            <div class="destination-1">
+            <div class="destination-1" onclick="getData(this)">
                 <div class="nama">Bromo, Jawa Timur</div>
                 <div class="rating">⭐ 4.9</div>
                 <div class="icon">
                     <img src="./images/travel8.jpg" alt="">
                 </div>
             </div>
-            <div class="destination-1">
+            <div class="destination-1" onclick="getData(this)">
                 <div class="nama">Banda Neira, Maluku</div>
                 <div class="rating">⭐ 4.6</div>
                 <div class="icon">
                     <img src="./images/travel9.jpg" alt="">
                 </div>
             </div>
-            <div class="destination-1">
+            <div class="destination-1" onclick="getData(this)">
                 <div class="nama">Raja Ampat, Papua Barat</div>
                 <div class="rating">⭐ 4.5</div>
                 <div class="icon">
                     <img src="./images/travel3.jpg" alt="">
                 </div>
             </div>
-            <div class="destination-1">
+            <div class="destination-1" onclick="getData(this)">
                 <div class="nama">Raja Ampat, Papua Barat</div>
                 <div class="rating">⭐ 4.5</div>
                 <div class="icon">
@@ -80,21 +86,10 @@
             </div>
         </section>
     </div>
-    
-    <script>
-        let a = document.querySelector(".menu-home");
-        a.addEventListener("click",function(){
-            window.location = "index.html"
-        })
-        let b = document.querySelector(".menu-ticket");
-        b.addEventListener("click",function(){
-            window.location = "ticket.html"
-        })
-        let c = document.querySelector(".contents .menu-destination .hotel");
-        c.addEventListener("click",function(){
-            window.location = "destinationshotel.html"
-        })
-    </script>
 
+    <script src="js/MovePage.js"></script>
+    <script src="js/popUp.js"></script>
+    <script src="js/API.js"></script>
+    <script src="js/Generated_Destination.js"></script>
 </body>
 </html>

@@ -1,8 +1,5 @@
 body {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    background-color: black;
+    margin: 0;
 }
 
 .wallpaper-container {
@@ -148,5 +145,3 @@ nav {
     object-fit: cover;
     object-position: 100%;
 }
-
-

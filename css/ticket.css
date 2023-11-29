@@ -58,7 +58,6 @@ nav {
     color: white;
     font-family: monospace;
     font-size: larger;
-
     position: absolute;
     top: 25%;
     left: 14%;
@@ -72,17 +71,27 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 50px;
+    overflow-y: scroll;
+}
+
+.content::-webkit-scrollbar {
+    width: 0;
 }
 
 .content .contents {
+    width: 25%;
+    border-bottom: 2px solid white;
     /* background-color: black; */
-    
+    /* height: min-content; */
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    /* justify-content: center; */
+    /* align-items: baseline; */
+}
 
-    width: 25%;
-    height: 75px;
-    border-bottom: 2px solid white;
+.content .contents p {
+    margin: 0;
 }
 
 .pesan-ticket { 
@@ -109,6 +118,8 @@ nav {
     border: none;
     width: 100%;
     height: 100%;
+    font-size: 15px;
+    font-family: monospace;
 }
 
 .content select {
@@ -117,19 +128,36 @@ nav {
     border: none;
     width: 100%;
     height: 100%;
+    font-family: monospace;
+    font-size: 15px;
+
 }
 
 .content option{
     color: black;
     border: none;
-    /* width: 100%;
-    height: 100%; */
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-    /* background-color: none; */
-    /* color: white;
-    background-color: white; */
+input[type="time"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
     cursor: pointer;
+}
+
+.search-ticket {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-ticket button {
+    background-color: rgb(1, 148, 243);
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.pesawat {
+    display: flex;
+    gap: 20px;
 }
