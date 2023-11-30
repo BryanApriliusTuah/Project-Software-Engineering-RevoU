@@ -12,7 +12,6 @@ function submit(){
     let ke = document.querySelector("#ke")
     let jenis_penerbangan = document.querySelector("#jenis-penerbangan")
     let tanggal_pergi = document.querySelector("#tanggal-pergi")
-    let tanggal_pulang = document.querySelector("#tanggal-pulang")
     let kelas = document.querySelector("#kelas-penerbangan")
 
     GetDataTicket(dari.value)
@@ -22,7 +21,7 @@ function submit(){
             `
                 <div class="search-ticket">
                     <div class="pesawat">
-                        <img src="images/citilink.png" alt="" width="50px" height="auto">
+                        <img src="images/${ticket.Gambar}.png" alt="" width="50px" height="auto">
                         <p>${ticket.Jenis_Pesawat}</p> 
                     </div>
                     <p>${ticket.Waktu_Berangkat} - ${ticket.Waktu_Tiba}</p>

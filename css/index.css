@@ -6,7 +6,6 @@ body {
 }
 
 .wallpaper-container {
-    /* background: green; */
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -29,8 +28,6 @@ body {
 }
 
 nav {
-    /* background: rgba(0,0,0,0.2);
-    border-radius: 0 0 20px 20px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,14 +36,61 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
+    height: auto;
     z-index: 1;
+}
+
+.contents {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 80px;
+    margin-left: 80px;
+}
+
+@media (max-width:1130px){
+    .contents {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .wallpaper-container{
+        width: 100%;
+        height: 165%;
+        object-fit: cover;
+    }
+    
+    .wallpaper-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .filter-wallpaper {
+        position: absolute;
+        background: #030834;
+        width: 100%;
+        height: 165%;
+        opacity: 0.4;
+        z-index: -1;
+    }
+
+    @media (max-width:600px){
+        .destinations {
+            flex-direction: column;
+            width: auto;
+
+        }
+    }
 }
 
 .judul {
     padding-left: 50px;
 }
 .menu {
-    /* background: grey; */
     height: 100%;
     width: 60%;
     display: flex;
@@ -60,8 +104,6 @@ nav {
 }
 
 .Teks {
-    margin-top: 150px;
-    margin-left: 150px;
     color: white;
     
 }
@@ -86,15 +128,10 @@ nav {
 }
 
 .destinations {
-    /* background: gray; */
     width: 600px;
     height: 400px;
     border-radius: 20px;
-    position: absolute;
-    top: 25%;
-    right: 3%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     color: white;
     gap: 30px;
@@ -114,15 +151,11 @@ nav {
 }
 
 .destination-1 {
-    /* margin-left: 15px; */
-    /* background: green; */
     min-width: 40%;
     height: 98%;
     border-radius: 20px;
-    /* overflow: auto; */
 }
 .nama {
-    /* background: wheat; */
     width: 100%;
     height: 7.5%;
 }
@@ -132,13 +165,10 @@ nav {
 }
 
 .icon {
-    /* background: blue; */
     width: 100%;
     height: 85%;
     border-radius: 20px;
     box-shadow: 5px 5px 10px black;
-    /* margin-top: 35px;
-    margin-bottom: 0px; */
 }
 
 .icon img {
@@ -148,5 +178,3 @@ nav {
     object-fit: cover;
     object-position: 100%;
 }
-
-

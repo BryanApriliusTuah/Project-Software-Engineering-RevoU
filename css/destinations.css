@@ -23,7 +23,6 @@ body {
 }
 
 .popUp .confirmation {
-    /* background-color: red; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -47,8 +46,6 @@ body {
 }
 
 .popUp .information {
-    /* background-color: blue; */
-    /* justify-content: center; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -57,7 +54,6 @@ body {
 }
 
 .popUp .information .booking {
-    /* background-color: red; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -72,7 +68,6 @@ body {
 }
 
 .popUp .information .button {
-    /* background-color: black; */
     width: 100%;
     display: flex;
     height: 10%;
@@ -104,7 +99,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .wallpaper-container {
-    /* background: green; */
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -127,11 +121,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 nav {
-    /* background: green; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
+    width: 100%;
+    height: auto;
     color: white;
 }
 
@@ -140,7 +134,6 @@ nav {
 }
 
 .menu {
-    /* background: grey; */
     height: 100%;
     width: 60%;
     display: flex;
@@ -154,7 +147,6 @@ nav {
 }
 
 .menu-destination {
-    /* background-color: black; */
     position: relative;
     margin-top: 5%;
     margin-left: 3%;
@@ -186,7 +178,6 @@ nav {
 }
 
 .destination {
-    /* background: grey; */
     color: white;
     font-family: monospace;
     font-size: large;
@@ -202,7 +193,6 @@ nav {
 }
 
 .destination .destination-1 {
-    /* background-color: #030834; */
     min-width: 20%;
     height: 100%;
     display: flex;
@@ -210,7 +200,6 @@ nav {
 }
 
 .destination .destination-1 .icon {
-    /* background: blue; */
     width: 100%;
     height: 87%;
     border-radius: 20px;
@@ -227,4 +216,35 @@ nav {
 
 .destination::-webkit-scrollbar {
     width: 0;
+}
+
+
+@media (max-width:1130px){
+    .contents {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width:800px){
+        .contents {
+            align-items: center;
+            gap: 30px;
+        }
+
+        .destination {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            width: 100%;
+            align-items: center;
+        }
+
+        .destination-1 {
+            display: flex;
+            width: 50%;
+            height: auto;
+        }
+    }
 }

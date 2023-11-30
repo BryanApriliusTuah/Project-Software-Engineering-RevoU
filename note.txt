@@ -1,3 +1,3 @@
-1. responsive website
+1. responsive website (Completed)
 2. GET and POST API (Completed)
 3. Contact Us to POST data to API (Completed)

@@ -2,11 +2,9 @@ body {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    /* background-color: black; */
 }
 
 .wallpaper-container {
-    /* background: green; */
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -29,7 +27,6 @@ body {
 }
 
 nav {
-    /* background: green; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,7 +38,6 @@ nav {
     padding-left: 50px;
 }
 .menu {
-    /* background: grey; */
     height: 100%;
     width: 60%;
     display: flex;
@@ -62,7 +58,7 @@ nav {
     top: 25%;
     left: 14%;
     width: 70%;
-    height: 60%;
+    height: 50%;
     border: 2px solid white;
     border-radius: 20px;
     background: rgba(0, 33, 117, 0.20);

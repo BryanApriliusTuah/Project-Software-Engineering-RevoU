@@ -27,14 +27,17 @@ body {
 }
 
 nav {
-    /* background: green; */
+    background: rgba(255, 225, 150, 0.88);
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 50px;
     color: black;
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
 }
 
 .judul {
@@ -100,20 +103,19 @@ nav {
     margin: 0;
 }
 
-h1 {
-    padding-left: 47%;
+.text {
+    display: flex;
+    justify-content: center;
     margin: 50px 0;
-    /* border-top: 1px solid black; */
-    /* border-bottom: 1px solid black; */
+    width: 100%;
 }
 
-.h1-2 {
-    padding-left: 43.5%;
-    margin: 50px 0;
+.text h1 {
+    margin: 0;
+    height: fit-content;
 }
 
 .maskapai {
-    /* background-color: black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,4 +126,29 @@ h1 {
 .maskapai img {
     width: 15%;
     height: auto;
+}
+
+@media (max-width:730px){
+    .gambar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gambar img {
+        width: 150px;
+        height: 150px;
+    }
+
+    @media(max-width:680px){
+        .gambar {
+            width: 70%;
+            height: auto;
+            font-size: larger;
+        }
+
+        .gambar img {
+            width: 250px;
+            height: 250px;
+        }
+    }
 }
