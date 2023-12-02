@@ -84,6 +84,11 @@ nav {
             width: auto;
 
         }
+
+        .destination-1 {
+            width: 400px;
+            max-height: 300px;
+        }
     }
 }
 

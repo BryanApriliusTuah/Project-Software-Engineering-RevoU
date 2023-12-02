@@ -23,6 +23,11 @@ g.addEventListener("click",function(){
     window.location = "aboutUs.html"
 })
 
+let h = document.querySelector(".menu-my-ticket");
+h.addEventListener("click",function(){
+    window.location = "myTicket.html"
+})
+
 let e = document.querySelector(".contents .menu-destination .hotel");
 e.addEventListener("click",function(){
     window.location = "destinationshotel.html"
@@ -32,3 +37,5 @@ let f = document.querySelector(".contents .menu-destination .liburan");
 f.addEventListener("click",function(){
     window.location = "destinations.html"
 })
+
+

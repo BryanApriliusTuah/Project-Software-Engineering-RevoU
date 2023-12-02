@@ -1,4 +1,11 @@
 let popUp = document.querySelector(".popUp")
+function SendDataDestination(data){
+    let array = []
+    array.push(data.querySelector(".nama").textContent,data.querySelector(".rating").textContent,data.querySelector(".icon img").src)
+    console.log(array)
+    SendDataTicketDestination(array)
+}
+
 function getData(data){
     popUp.style.visibility = "visible"
     popUp.innerHTML = `
@@ -15,11 +22,15 @@ function getData(data){
         </div>
             <div class="button">
             <button onclick = "removePopUp()">Cancel</button>
-            <button onclick = "confirmPopUp()">Confirm</button>
+            <button class="btn2" onclick = "confirmPopUp()">Confirm</button>
         </div>
         
     </div>
         `
+    let a = document.querySelector(".button .btn2")
+    a.addEventListener('click',function(event){
+        SendDataDestination(data)
+    })
 }
 
 function removePopUp(){
@@ -32,7 +43,6 @@ function confirmPopUp(){
     if(document.querySelectorAll(".booking input")[0].value === ""){
         alert("Isi")
     }else{
-        console.log("ada")
         popUp.innerHTML = `
         <div class="confirmation">
             <h1>Your room has been booked!</h1>
