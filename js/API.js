@@ -39,11 +39,15 @@ async function SendDataPesanTicket(arraydata){
 
 async function SendDataTicketDestination(arraydata){
     let data = {
-        nama : arraydata[0],
-        rating : arraydata[1],
-        gambar : arraydata[2]
+        nama : arraydata[1],
+        rating : 5,
+        gambar : arraydata[0],
+        checkin : arraydata[2],
+        checkout : arraydata[3],
+        room : arraydata[4],
+        pay : arraydata[5]
     }
-
+    console.log(data)
     let response = await fetch("https://gray-gleaming-codfish.cyclic.app/Destination", {
         method : "POST",
         body : JSON.stringify(data),

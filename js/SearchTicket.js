@@ -1,7 +1,6 @@
 let isi = document.querySelector(".content")
 let btn = document.querySelector(".pesan-ticket")
 let isi2 = ""
-// let penyimpanan = {}
 
 function simpandata(data){
     let array = []
@@ -12,17 +11,13 @@ function simpandata(data){
     })
     console.log(array)
     SendDataPesanTicket(array)
-
-    // penyimpanan[`${data.querySelector('.pesawat p').textContent}`] = array
-    // console.log(penyimpanan)
-
-
+    Pesan()
 }
 
-// function Pesan(){
-//     alert("Ticket telah dipesan")
-//     window.location = "ticket.html"
-// }
+function Pesan(){
+    alert("Ticket telah dipesan")
+    window.location = "ticket.html"
+}
 
 function submit(){
     let dari = document.querySelector("#dari")
@@ -50,7 +45,7 @@ function submit(){
                     <p>🫰🏻 ${ticket.Harga}/org</p>
                     <p>💺 ${ticket.Kelas}</p>
                     
-                    <button class="PesanBtn" >🔖Pesan</button>
+                    <button class="PesanBtn">🔖Pesan</button>
                 </div> 
             `
         }

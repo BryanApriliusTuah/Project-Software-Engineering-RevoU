@@ -9,7 +9,7 @@ GetDataDestination()
             <div class="nama">${content.Destinasi}</div>
             <div class="rating">⭐ ${content.Rating}</div>
             <div class="icon">
-                <img src="${content.Gambar}" alt="">
+                <img src="./images/${content.Gambar}" alt="">
             </div>
         </div>`
     }

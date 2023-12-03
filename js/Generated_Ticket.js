@@ -32,10 +32,15 @@ GetDataTicketDestination()
     for (const content of data) {
         isi4 += `
         <div class="destination">
-            <div class="nama">${content.nama}</div>
-            <div class="rating">${content.rating}</div>
             <div class="icon">
                 <img src="${content.gambar}" alt="">
+            </div>
+            <div class="container"> 
+                <div class="nama">${content.nama}</div>
+                <div class="checkin">Check-In : ${content.checkin}</div>
+                <div class="checkout">Check-Out : ${content.checkout}</div>
+                <div class="room">${content.room}</div>
+                <div class="pay">${content.pay}</div>
             </div>
         </div>
         `
