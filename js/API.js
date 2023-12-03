@@ -6,7 +6,7 @@ async function SendDataContactUs(nama,email,message){
         Message : message
     }
 
-    let response = await fetch("http://localhost:3000/ContactUs", {
+    let response = await fetch("https://gray-gleaming-codfish.cyclic.app/ContactUs", {
         method : "POST",
         body : JSON.stringify(data),
         headers : {'Content-type': 'application/json; charset=UTF-8',}
@@ -27,7 +27,7 @@ async function SendDataPesanTicket(arraydata){
         kelas : arraydata[6]
     }
 
-    let response = await fetch("http://localhost:3000/Ticket", {
+    let response = await fetch("https://gray-gleaming-codfish.cyclic.app/Ticket", {
         method : "POST",
         body : JSON.stringify(data),
         headers : {'Content-type': 'application/json; charset=UTF-8',}
@@ -44,7 +44,7 @@ async function SendDataTicketDestination(arraydata){
         gambar : arraydata[2]
     }
 
-    let response = await fetch("http://localhost:3000/Destination", {
+    let response = await fetch("https://gray-gleaming-codfish.cyclic.app/Destination", {
         method : "POST",
         body : JSON.stringify(data),
         headers : {'Content-type': 'application/json; charset=UTF-8',}
@@ -55,7 +55,7 @@ async function SendDataTicketDestination(arraydata){
 }
 
 async function GetDataTicketDestination(){
-    let response = await fetch("http://localhost:3000/DestinationData",{
+    let response = await fetch("https://gray-gleaming-codfish.cyclic.app/DestinationData",{
         method : "GET"
     })
 
@@ -65,7 +65,7 @@ async function GetDataTicketDestination(){
 }
 
 async function GetDataPesanTicket(){
-    let response = await fetch("http://localhost:3000/Ticket",{
+    let response = await fetch("https://gray-gleaming-codfish.cyclic.app/Ticket",{
         method : "GET"
     })
 
@@ -77,7 +77,7 @@ async function GetDataPesanTicket(){
 
 //Get Data Destination from Server
 async function GetDataDestination(){
-    let response = await fetch("http://localhost:3000/Destination",{
+    let response = await fetch("https://gray-gleaming-codfish.cyclic.app/Destination",{
         method : "GET"
     })
 
@@ -87,7 +87,7 @@ async function GetDataDestination(){
 }
 
 async function GetDataTicket(dari,ke,jenis_penerbangan,tanggal_pergi,kelas){
-    let response = await fetch(`http://localhost:3000/JadwalTiket?Dari=${dari}&Ke=${ke}&Jenis_Pesawat=${jenis_penerbangan}&Waktu_Berangkat=${tanggal_pergi}&Kelas=${kelas}`,{
+    let response = await fetch(`https://gray-gleaming-codfish.cyclic.app/JadwalTiket?Dari=${dari}&Ke=${ke}&Jenis_Pesawat=${jenis_penerbangan}&Waktu_Berangkat=${tanggal_pergi}&Kelas=${kelas}`,{
         method : "GET",
     })
     let result = await response.json()
