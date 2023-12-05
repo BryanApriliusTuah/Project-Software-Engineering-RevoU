@@ -80,8 +80,8 @@ async function GetDataPesanTicket(){
 
 
 //Get Data Destination from Server
-async function GetDataDestination(){
-    let response = await fetch("https://gray-gleaming-codfish.cyclic.app/Destination",{
+async function GetDataDestination(data){
+    let response = await fetch(`https://gray-gleaming-codfish.cyclic.app/Destination?kota=${data}`,{
         method : "GET"
     })
 

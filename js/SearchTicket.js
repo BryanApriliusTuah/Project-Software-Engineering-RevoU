@@ -15,8 +15,17 @@ function simpandata(data){
 }
 
 function Pesan(){
-    alert("Ticket telah dipesan")
-    window.location = "ticket.html"
+    setTimeout(function() {
+        Swal.fire({
+            title: "Terima kasih!",
+            text: "Tiket Pesawat Anda Berhasil Dipesan!",
+            icon: "success"
+        });
+        // Show SweetAlert after 1500 milliseconds (1.5 seconds) of delay from the redirection
+        setTimeout(function() {
+            window.location = "ticket.html";
+        }, 5000);
+    }, 1000);
 }
 
 function submit(){

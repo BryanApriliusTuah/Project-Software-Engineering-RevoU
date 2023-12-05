@@ -169,3 +169,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .PesanBtn {
     cursor: pointer;
 }
+
+.PesanBtn:active {
+    background-color: black;
+    color: white;
+}
+
+.pesan-ticket button:active {
+    background-color: black;
+    color: white;
+}

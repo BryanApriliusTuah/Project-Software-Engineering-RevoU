@@ -5,6 +5,8 @@ body {
     /* background-color: black; */
 }
 
+
+
 .wallpaper-container {
     /* background: green; */
     position: absolute;
@@ -72,16 +74,28 @@ nav {
     border-radius: 20px;
     color: white;
     display: flex;
+    justify-content: center;
+}
+
+.contactus .wrapper-contactus {
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    justify-content: space-evenly;
+    
 }
 
 .contactus .a {
-    /* background: rgba(255, 255, 255, 0.3); */
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
+}
+
+.contactus .a p {
+    width: 120px;
 }
 
 .info {
@@ -135,7 +149,16 @@ nav {
 .form .button button {
     background: rgba(255, 255, 255, 0.3);
     border: none;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     color: white;
+}
+
+.form .button button:hover {
+    background-color: black;
+    color: yellow;
+}
+
+.form .button button:active {
+    box-shadow: 2px 2px 5px black;
 }

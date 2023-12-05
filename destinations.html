@@ -7,9 +7,7 @@
 </head>
 <body>
 
-    <div class="popUp">
-
-    </div>
+    <div class="popUp"></div>
 
     <!-- Background Wallpaper & Filter Wallpaper -->
     <div class="wallpaper-container">
@@ -34,11 +32,17 @@
 
     <div class="contents">
         <section class="menu-destination">
-            <div class="liburan">
-                <p>Liburan</p>
+            <div class="liburan" onclick="Data(this)">
+                <p>Jakarta</p>
             </div>
-            <div class="hotel">
-                <p>Hotel</p>
+            <div class="liburan" onclick="Data(this)">
+                <p>Jawa Tengah</p>
+            </div>
+            <div class="liburan">
+                <p>Jawa Timur</p>
+            </div>
+            <div class="liburan">
+                <p>Bali</p>
             </div>
         </section>
     
@@ -93,5 +97,6 @@
     <script src="js/popUp.js"></script>
     <script src="js/API.js"></script>
     <script src="js/Generated_Destination.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
