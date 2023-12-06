@@ -1,7 +1,11 @@
 let popUp = document.querySelector(".popUp")
+let darken = document.querySelector(".darken")
 
 function getData(data){
     popUp.style.visibility = "visible"
+    popUp.style.opacity = "1"
+    darken.style.visibility = "visible"
+    darken.style.opacity = "1"
     popUp.innerHTML = 
     `
         <img src="${data.querySelector('.icon img').src}" alt="">
@@ -21,11 +25,18 @@ function getData(data){
             </div>
         </div>
     `
-
+    darken.addEventListener('click',function(){
+        removePopUp()
+    })
 }
 
 function removePopUp(){
+    popUp.style.opacity = "0"
     popUp.style.visibility = "hidden"
+
+    darken.style.opacity = "0"
+    darken.style.visibility = "hidden"
+
     popUp.innerHTML = ``
 }
 
