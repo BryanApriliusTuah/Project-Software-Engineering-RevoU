@@ -29,10 +29,11 @@ body {
     color: white;
     font-family: monospace;
 
+    
     transition: ease-in 0.3s;
     opacity: 0;
     visibility: hidden;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 20px;
     display: flex;
     gap: 10px;
@@ -112,7 +113,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 100%;
     border-radius: 20px;
     object-fit: cover;
-    object-position: 100%;
+    object-position: 50%;
     box-shadow: 5px 5px 15px black;
 }
 
