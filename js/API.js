@@ -89,6 +89,15 @@ async function GetDataDestination(data){
     console.log("Data Dari Server",result)
     return result
 }
+async function GetDataDestinationHarga(data){
+    let response = await fetch(`https://gray-gleaming-codfish.cyclic.app/DestinationHarga?Destinasi=${data}`,{
+        method : "GET"
+    })
+
+    let result = await response.json()
+    console.log("Data Dari Server",result)
+    return result
+}
 
 async function GetDataTicket(dari,ke,jenis_penerbangan,tanggal_pergi,kelas){
     let response = await fetch(`https://gray-gleaming-codfish.cyclic.app/JadwalTiket?Dari=${dari}&Ke=${ke}&Jenis_Pesawat=${jenis_penerbangan}&Waktu_Berangkat=${tanggal_pergi}&Kelas=${kelas}`,{

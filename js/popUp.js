@@ -6,25 +6,38 @@ function getData(data){
     popUp.style.opacity = "1"
     darken.style.visibility = "visible"
     darken.style.opacity = "1"
-    popUp.innerHTML = 
-    `
-        <img src="${data.querySelector('.icon img').src}" alt="">
-        <div class="information">
-            <h1>${data.querySelector('.nama').textContent}</h1>
-            <div class="booking">
-                <label for="">Check In : </label>
-                <input type="date" id="checkInInput" required >
+    let popUp2 = ""
+    let img = data.querySelector('.icon img').src
+    let title = data.querySelector('.nama').textContent
+
+    GetDataDestinationHarga(data.querySelector('.nama').textContent)
+    .then((data) => {
+        popUp2 = 
+        `
+            <img src="${img}" alt="">
+            <div class="information">
+                <h1>${title}</h1>
+                <h3>Mulai dari ${data[0].Harga}</h3>
+                <div class="booking">
+                    <label for="">Check In : </label>
+                    <input type="date" id="checkInInput" required >
+                </div>
+                <div class="booking">
+                    <label for="">Check Out : </label>
+                    <input type="date" id="checkOutInput" required >
+                </div>
+                <div class="button">
+                    <button onclick = "removePopUp()">Cancel</button>
+                    <button class="btn2" onclick = "confirmPopUp()">Confirm</button>
+                </div>
             </div>
-            <div class="booking">
-                <label for="">Check Out : </label>
-                <input type="date" id="checkOutInput" required >
-            </div>
-            <div class="button">
-                <button onclick = "removePopUp()">Cancel</button>
-                <button class="btn2" onclick = "confirmPopUp()">Confirm</button>
-            </div>
-        </div>
-    `
+        `
+        return popUp2
+    })
+    .then((data)=> popUp.innerHTML = data)
+    .catch((e)=>console.log(e))
+
+    
     darken.addEventListener('click',function(){
         removePopUp()
     })

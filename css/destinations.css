@@ -66,11 +66,14 @@ body {
 
 .popUp .information {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    gap: 35px;
 }
+
+.popUp .information h1,h3{font-size-adjust: 0.5;margin: 0;width: fit-content;}
 
 .popUp .information .booking {
     width: 100%;
@@ -91,10 +94,12 @@ body {
     display: flex;
     height: 10%;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .popUp .information .button button {
-    background-color: rgba(0, 0, 0, 0.5);
+
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border: none;
     padding: 10px;
@@ -166,7 +171,6 @@ nav {
 }
 
 .menu-destination {
-    position: relative;
     margin-top: 5%;
     margin-left: 3%;
     display: flex;
@@ -210,7 +214,8 @@ nav {
 }
 
 .destination .destination-1 {
-    min-width: 20%;
+    min-width: 25%;
+    max-width: 25%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -294,12 +299,23 @@ nav {
     cursor: pointer;
 }
 
-@media (max-width:1130px){
+@media (max-width:980px){
     .contents {
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: auto;
+    }
+
+    .contents .destination {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .contents .destination .destination-1 {
+        min-width: 30%;
+        max-width: 30%;
+        height: 100%;
     }
 
     @media (max-width:800px){
