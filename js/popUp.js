@@ -12,12 +12,13 @@ function getData(data){
 
     GetDataDestinationHarga(data.querySelector('.nama').textContent)
     .then((data) => {
+        let harga = (data[0].Harga === null) ? "Ticket masuk gratis" : `Mulai dari ${data[0].Harga}`
         popUp2 = 
         `
             <img src="${img}" alt="">
             <div class="information">
                 <h1>${title}</h1>
-                <h3>Mulai dari ${data[0].Harga}</h3>
+                <h3>${harga}</h3>
                 <div class="booking">
                     <label for="">Check In : </label>
                     <input type="date" id="checkInInput" required >
