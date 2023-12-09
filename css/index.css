@@ -94,7 +94,15 @@ nav {
 
 .judul {
     padding-left: 50px;
+    display: flex;
+    align-items: center;
 }
+
+.judul img {
+    width: auto;
+    height: 55px;
+}
+
 .menu {
     height: 100%;
     width: 60%;
