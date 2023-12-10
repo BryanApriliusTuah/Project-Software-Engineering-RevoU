@@ -39,8 +39,8 @@ GetDataTicketDestination()
                 <div class="nama">${content.nama}</div>
                 <div class="checkin">Check-In : ${content.checkin}</div>
                 <div class="checkout">Check-Out : ${content.checkout}</div>
-                <div class="room">${content.room}</div>
-                <div class="pay">${content.pay}</div>
+                <div class="room">Room : ${content.room}</div>
+                <div class="pay">Payment : ${content.pay}</div>
             </div>
         </div>
         `

@@ -3,22 +3,34 @@ let btn = document.querySelector(".pesan-ticket")
 let isi2 = ""
 
 function simpandata(data){
-    let array = []
-    array.push(data.querySelector(".pesawat img").src)
-    let data2 = data.querySelectorAll('p')
-    data2.forEach(function(isi){
-        array.push(isi.textContent)
-    })
-    console.log(array)
-    SendDataPesanTicket(array)
-    Pesan()
+    Swal.fire({
+        title: "Are you sure?",
+        text: "Once booked, it cannot be refunded!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes"
+      }).then((result) => {
+        if (result.isConfirmed) {
+             let array = []
+            array.push(data.querySelector(".pesawat img").src)
+            let data2 = data.querySelectorAll('p')
+            data2.forEach(function(isi){
+                array.push(isi.textContent)
+            })
+            console.log(array)
+            SendDataPesanTicket(array)
+            Pesan()
+        }
+      });
 }
 
 function Pesan(){
     setTimeout(function() {
         Swal.fire({
-            title: "Terima kasih!",
-            text: "Tiket Pesawat Anda Berhasil Dipesan!",
+            title: "Thank you!",
+            text: "Your flight ticket has been successfully booked!",
             icon: "success"
         });
         // Show SweetAlert after 1500 milliseconds (1.5 seconds) of delay from the redirection
@@ -38,7 +50,11 @@ function submit(){
     GetDataTicket(dari.value,ke.value,jenis_penerbangan.value,tanggal_pergi.value,kelas.value)
     .then((data) => {
         if(data.length == 0){
-            alert("Jadwal Penerbangan Tidak Ada")
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "There are no flight schedules available."
+              });
         }else{
         for (const ticket of data) {
             isi2 += 

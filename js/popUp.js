@@ -63,26 +63,49 @@ function confirmPopUp(){
     if (checkInValue === '' || checkOutValue === '') {
         // alert("Please fill in both check-in and check-out dates.");
         Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Anda Tidak Mengisi Tanggal CheckIn ataupun CheckOut!"
+            title: "Did you forget something?",
+            text: "Please fill in both of those dates!",
+            icon: "question"
           });
         return false; // Prevent form submission
     }else{
-        popUp.innerHTML = 
-        `
-        <div class="confirmation">
-            <h1>Your room has been booked!</h1>
-            <p class="room">Room : ${generateString(2)}</p>
-            <p class="pay">Code Payment : ${generateString(5)}</p>
-            <button onclick = "removePopUp()">OK</button>
-        </div>
-        `
-        let room = document.querySelector('.confirmation .room').textContent;
-        let pay = document.querySelector('.confirmation .pay').textContent;
-        console.log(img,nama,checkInValue,checkOutValue,room,pay)
-        SendDataDestination(img,nama,checkInValue,checkOutValue,room,pay)
-
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Once booked, it cannot be refunded!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                setTimeout(function() {
+                    Swal.fire({
+                        title: "Thank you!",
+                        text: "Your ticket has been successfully booked!",
+                        icon: "success"
+                    });
+                    // Show SweetAlert after 1500 milliseconds (1.5 seconds) of delay from the redirection
+                    setTimeout(function() {
+                        window.location = "destinations.html";
+                    }, 5000);
+                }, 1000);
+                // popUp.innerHTML = 
+                // `
+                // <div class="confirmation">
+                //     <h1>Your room has been booked!</h1>
+                //     <p class="room">Room : ${generateString(2)}</p>
+                //     <p class="pay">Code Payment : ${generateString(5)}</p>
+                //     <button onclick = "removePopUp()">OK</button>
+                // </div>
+                // `
+                // let room = document.querySelector('.confirmation .room').textContent;
+                // let pay = document.querySelector('.confirmation .pay').textContent;
+                // console.log(img,nama,checkInValue,checkOutValue,room,pay)
+                SendDataDestination(img,nama,checkInValue,checkOutValue,generateString(2),generateString(5))
+            }
+          });
+        
     }
 
 
