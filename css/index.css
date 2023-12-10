@@ -32,6 +32,10 @@
 }
 
 @media (min-width:1000px){
+    body {
+        overflow: hidden;
+    }
+    
     .contents {
         margin-top: 80px;
         margin-left: 80px;
