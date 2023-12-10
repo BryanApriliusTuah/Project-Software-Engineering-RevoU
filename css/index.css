@@ -1,3 +1,47 @@
+@media (max-width:980px){
+    .contents {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        align-items: center;
+
+    }
+
+    .destinations {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destinations .destination-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 5px;
+    }
+
+    .destinations .destination-1 .icon {
+        width: 100%;
+        height: 300px;
+    }
+
+    .destinations .destination-1 .icon img {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (min-width:1000px){
+    .contents {
+        margin-top: 80px;
+        margin-left: 80px;
+    }
+
+    .destinations {
+        overflow-x: auto;
+    }
+}
+
 body {
     margin-top: 0;
     margin-left: 0;
@@ -16,6 +60,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50%;
 }
 
 .filter-wallpaper {
@@ -41,55 +86,11 @@ nav {
 }
 
 .contents {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 80px;
-    margin-left: 80px;
-}
-
-@media (max-width:1130px){
-    .contents {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-    }
-
-    .wallpaper-container{
-        width: 100%;
-        height: 165%;
-        object-fit: cover;
-    }
-    
-    .wallpaper-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .filter-wallpaper {
-        position: absolute;
-        background: #030834;
-        width: 100%;
-        height: 165%;
-        opacity: 0.4;
-        z-index: -1;
-    }
-
-    @media (max-width:600px){
-        .destinations {
-            flex-direction: column;
-            width: auto;
-
-        }
-
-        .destination-1 {
-            width: 400px;
-            max-height: 300px;
-        }
-    }
 }
 
 .judul {
@@ -148,7 +149,6 @@ nav {
     align-items: center;
     color: white;
     gap: 30px;
-    overflow-x: auto;
 }
 
 .destination-1:first-child{
