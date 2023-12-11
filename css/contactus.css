@@ -196,11 +196,21 @@ nav {
     }
 
     .wrapper-contactus {
-        gap: 10px;
+        gap: 40px;
     }
 
     h1{
         margin: 0;
         border-bottom: 2px solid white;
+    }
+
+    .form {
+        gap: 30px;
+        font-size: x-large;
+        width: 500px;
+    }
+
+    .form .all input{
+        height: 50px;
     }
 }
