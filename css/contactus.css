@@ -4,6 +4,15 @@ body {
     margin-right: 0;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .wallpaper-container {
     position: absolute;
     z-index: -1;
