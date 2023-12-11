@@ -312,10 +312,6 @@ nav {
 
 @media (min-width:1000px){
 
-    body {
-        /* overflow: hidden; */
-    }
-
     .destination .destination-1 {
         min-width: 25%;
         max-width: 25%;
